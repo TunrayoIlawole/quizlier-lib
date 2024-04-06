@@ -1,7 +1,7 @@
 package com.quizlier.common.entity;
 
 public enum UserRole {
-    ADMIN,
-    SUPER_ADMIN,
-    PLAYER
+    admin,
+    super_admin,
+    player
 }

@@ -18,7 +18,7 @@ public class UserTests {
 		user.setLastName("Doe");
 		user.setUsername("jeandoe");
 		user.setEmail("jean.doe@gmail.com");
-		user.setUserRole(UserRole.ADMIN);
+		user.setUserRole(UserRole.admin);
 		user.setPassword("password101");
 		user.setCreated_at(new Date());
 		user.setUpdated_at(new Date());
@@ -28,7 +28,7 @@ public class UserTests {
 		assertEquals("Doe", user.getLastName());
 		assertEquals("jeandoe", user.getUsername());
 		assertEquals("jean.doe@gmail.com", user.getEmail());
-		assertEquals(UserRole.ADMIN, user.getUserRole());
+		assertEquals(UserRole.admin, user.getUserRole());
 		assertEquals("password101", user.getPassword());
 		assertNotNull(user.getCreated_at());
 		assertNotNull(user.getUpdated_at());

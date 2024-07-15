@@ -50,6 +50,9 @@ public class User {
     @Temporal(TemporalType.TIMESTAMP)
     private Date updated_at;
 
+	@Column(nullable = false)
+	private Integer highest_score;
+
 	public Long getId() {
 		return id;
 	}
@@ -120,5 +123,13 @@ public class User {
 
 	public void setUpdated_at(Date updated_at) {
 		this.updated_at = updated_at;
+	}
+
+	public Integer getHighest_score() {
+		return highest_score;
+	}
+
+	public void setHighest_score(Integer highest_score) {
+		this.highest_score = highest_score;
 	}
 }

@@ -8,7 +8,7 @@ import com.quizlier.common.vo.ServiceMessages;
 import com.quizlier.common.vo.ServiceResponse;
 import com.quizlier.common.vo.ServiceStatusCodes;
 
-public class UserRequest {
+public class UserSignupRequest {
     private String firstName;
     
     private String lastName;

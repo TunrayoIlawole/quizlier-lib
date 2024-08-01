@@ -6,6 +6,7 @@ import java.util.List;
 public class QuestionResponseFull {
 	private Long id;
 	private String question;
+	private Long categoryId;
 	private List<OptionResponse> options;
 
 	public Long getId() {
@@ -22,6 +23,14 @@ public class QuestionResponseFull {
 
 	public void setQuestion(String question) {
 		this.question = question;
+	}
+
+	public Long getCategoryId() {
+		return categoryId;
+	}
+
+	public void setCategoryId(Long categoryId) {
+		this.categoryId = categoryId;
 	}
 
 	public List<OptionResponse> getOptions() {

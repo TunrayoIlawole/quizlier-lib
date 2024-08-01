@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class OptionResponse {
 	private Long id;
-	private String option_text;
+	private String optionText;
 	private boolean isCorrect;
 	private Long questionId;
 	
@@ -17,11 +17,11 @@ public class OptionResponse {
 	}
 
 	public String getOptionText() {
-		return option_text;
+		return optionText;
 	}
 
 	public void setOptionText(String optionText) {
-		this.option_text = optionText;
+		this.optionText = optionText;
 	}
 
 	public boolean getIsCorrect() {

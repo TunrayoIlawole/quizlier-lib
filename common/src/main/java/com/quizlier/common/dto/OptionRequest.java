@@ -3,7 +3,7 @@ package com.quizlier.common.dto;
 public class OptionRequest {
     private String optionText;
     
-    private boolean isCorrect = false;
+    private boolean isCorrect;
 
 	public String getOptionText() {
 		return optionText;
@@ -13,11 +13,11 @@ public class OptionRequest {
 		this.optionText = optionText;
 	}
 
-	public boolean isCorrect() {
+	public boolean getIsCorrect() {
 		return isCorrect;
 	}
 
-	public void setCorrect(boolean isCorrect) {
+	public void setIsCorrect(boolean isCorrect) {
 		this.isCorrect = isCorrect;
 	}
 

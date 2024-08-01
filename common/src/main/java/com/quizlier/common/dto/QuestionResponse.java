@@ -6,8 +6,7 @@ public class QuestionResponse {
 	
 	private Long id;
 	private String question;
-	private Date createdAt;
-	private Date updatedAt;
+	private Long categoryId;
 	
 	public Long getId() {
 		return id;
@@ -24,21 +23,13 @@ public class QuestionResponse {
 	public void setQuestion(String question) {
 		this.question = question;
 	}
-	
-	public Date getCreatedAt() {
-		return createdAt;
+
+	public Long getCategoryId() {
+		return categoryId;
 	}
 
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
-	}
-
-	public Date getUpdatedAt() {
-		return updatedAt;
-	}
-
-	public void setUpdatedAt(Date updatedAt) {
-		this.updatedAt = updatedAt;
+	public void setCategoryId(Long categoryId) {
+		this.categoryId = categoryId;
 	}
 
 }

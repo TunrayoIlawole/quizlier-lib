@@ -6,8 +6,7 @@ public class OptionResponse {
 	private Long id;
 	private String option_text;
 	private boolean isCorrect;
-	private Date createdAt;
-	private Date updatedAt;
+	private Long questionId;
 	
 	public Long getId() {
 		return id;
@@ -24,28 +23,20 @@ public class OptionResponse {
 	public void setOptionText(String optionText) {
 		this.option_text = optionText;
 	}
-	
-	public Date getCreatedAt() {
-		return createdAt;
-	}
 
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
-	}
-
-	public Date getUpdatedAt() {
-		return updatedAt;
-	}
-
-	public void setUpdatedAt(Date updatedAt) {
-		this.updatedAt = updatedAt;
-	}
-
-	public boolean isCorrect() {
+	public boolean getIsCorrect() {
 		return isCorrect;
 	}
 
-	public void setCorrect(boolean isCorrect) {
+	public void setIsCorrect(boolean isCorrect) {
 		this.isCorrect = isCorrect;
+	}
+
+	public Long getQuestionId() {
+		return questionId;
+	}
+
+	public void setQuestionId(Long questionId) {
+		this.questionId = questionId;
 	}
 }

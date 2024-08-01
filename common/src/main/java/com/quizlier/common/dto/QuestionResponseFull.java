@@ -6,9 +6,6 @@ import java.util.List;
 public class QuestionResponseFull {
 	private Long id;
 	private String question;
-	private Date createdAt;
-	private Date updatedAt;
-	
 	private List<OptionResponse> options;
 
 	public Long getId() {
@@ -33,22 +30,6 @@ public class QuestionResponseFull {
 
 	public void setOptions(List<OptionResponse> options) {
 		this.options = options;
-	}
-
-	public Date getCreatedAt() {
-		return createdAt;
-	}
-
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
-	}
-
-	public Date getUpdatedAt() {
-		return updatedAt;
-	}
-
-	public void setUpdatedAt(Date updatedAt) {
-		this.updatedAt = updatedAt;
 	}
 
 }

@@ -7,7 +7,7 @@ public class QuestionRequest {
 		return question;
 	}
 
-	public void setDescription(String question) {
+	public void setQuestion(String question) {
 		this.question = question;
 	}
 }

@@ -26,7 +26,7 @@ public class Option {
     private String option_text;
     
     @Column(nullable = false)
-    private Boolean isCorrect;
+    private boolean isCorrect;
     
     @ManyToOne
     @JoinColumn(name = "questionid")
@@ -49,11 +49,11 @@ public class Option {
 		this.option_text = option_text;
 	}
 
-	public Boolean getIsCorrect() {
+	public boolean getIsCorrect() {
 		return isCorrect;
 	}
 
-	public void setIsCorrect(Boolean isCorrect) {
+	public void setIsCorrect(boolean isCorrect) {
 		this.isCorrect = isCorrect;
 	}
 

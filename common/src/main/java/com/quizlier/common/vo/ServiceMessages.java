@@ -7,6 +7,7 @@ public class ServiceMessages {
 	public static final String INVALID_EMAIL = "Email cannot be empty. Please enter a value";
 	public static final String INVALID_NAME = "First name cannot be empty. Please enter a value";
 	public static final String INVALID_PASSWORD = "Password cannot be empty. Please enter a value";
+	public static final String AUTH_SUCCESS = "User authenticated successfully";
 	public static final String CREDENTIALS_MISMATCH = "The email and password provided do not match. Please try again";
 	public static final String INVALID_USER = "That email address does not exist in our database. Please sign up";
 	public static final String MAXIMUM_OPTIONS = "Maximum number of options for question exceeded";

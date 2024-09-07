@@ -1,4 +1,4 @@
-package com.quizlier.common.entity;
+package com.quizlier.common.entity.core;
 
 import java.util.Date;
 
@@ -14,7 +14,7 @@ import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
 @Entity
-@Table(name = "categories", schema = "public")
+@Table(name = "category", schema = "core_service")
 public class Category {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

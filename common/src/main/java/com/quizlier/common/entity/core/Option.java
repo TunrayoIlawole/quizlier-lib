@@ -1,4 +1,4 @@
-package com.quizlier.common.entity;
+package com.quizlier.common.entity.core;
 
 import java.util.Date;
 
@@ -16,18 +16,21 @@ import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
 @Entity
-@Table(name = "questions", schema = "public")
-public class Question {
+@Table(name = "option", schema = "core_service")
+public class Option {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
     @Column(nullable = false)
-    private String question;
+    private String optionText;
+    
+    @Column(nullable = false)
+    private boolean isCorrect;
     
     @ManyToOne
-    @JoinColumn(name = "categoryid")
-    private Category category;
+    @JoinColumn(name = "questionid")
+    private Question question;
     
 	public Long getId() {
 		return id;
@@ -37,20 +40,29 @@ public class Question {
 		this.id = id;
 	}
     
-    public String getQuestion() {
+    
+    public String getOption_text() {
+		return optionText;
+	}
+
+	public void setOption_text(String option_text) {
+		this.optionText = option_text;
+	}
+
+	public boolean getIsCorrect() {
+		return isCorrect;
+	}
+
+	public void setIsCorrect(boolean isCorrect) {
+		this.isCorrect = isCorrect;
+	}
+
+	public Question getQuestion() {
 		return question;
 	}
 
-	public void setQuestion(String question) {
+	public void setQuestion(Question question) {
 		this.question = question;
-	}
-
-	public Category getCategory() {
-		return category;
-	}
-
-	public void setCategory(Category category) {
-		this.category = category;
 	}
 
 	public Date getCreatedAt() {

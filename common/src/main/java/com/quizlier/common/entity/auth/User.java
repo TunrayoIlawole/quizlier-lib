@@ -1,4 +1,4 @@
-package com.quizlier.common.entity;
+package com.quizlier.common.entity.auth;
 
 import java.util.Date;
 
@@ -17,7 +17,7 @@ import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
 @Entity
-@Table(name = "user", schema = "public")
+@Table(name = "user", schema = "auth_service")
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

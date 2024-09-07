@@ -5,8 +5,6 @@ import java.util.Date;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import com.quizlier.common.entity.auth.User;
-import com.quizlier.common.entity.auth.UserRole;
 import org.junit.jupiter.api.Test;
 
 public class UserTests {

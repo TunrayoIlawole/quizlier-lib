@@ -1,4 +1,4 @@
-package com.quizlier.common.entity.core;
+package com.quizlier.common.entity;
 
 import java.util.Date;
 
@@ -9,35 +9,26 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
 @Entity
-@Table(name = "category", schema = "core_service")
-public class Category {
+@Table(name = "question", schema = "core_service")
+public class Question {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
     @Column(nullable = false)
-    private String name;
+    private String question;
     
-    @Column(nullable = false)
-    private String description;
+    @ManyToOne
+    @JoinColumn(name = "categoryid")
+    private Category category;
     
-    @CreationTimestamp
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date createdAt;
-    
-    @CreationTimestamp
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date updatedAt;
-    
-    @CreationTimestamp
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date deletedAt;
-
 	public Long getId() {
 		return id;
 	}
@@ -45,21 +36,21 @@ public class Category {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
-	public String getName() {
-		return name;
+    
+    public String getQuestion() {
+		return question;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setQuestion(String question) {
+		this.question = question;
 	}
 
-	public String getDescription() {
-		return description;
+	public Category getCategory() {
+		return category;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setCategory(Category category) {
+		this.category = category;
 	}
 
 	public Date getCreatedAt() {
@@ -86,4 +77,15 @@ public class Category {
 		this.deletedAt = deletedAt;
 	}
 
+	@CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createdAt;
+    
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date updatedAt;
+    
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date deletedAt;
 }

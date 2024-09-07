@@ -1,4 +1,4 @@
-package com.quizlier.common.entity.auth;
+package com.quizlier.common.entity;
 
 public enum UserRole {
     ADMIN,

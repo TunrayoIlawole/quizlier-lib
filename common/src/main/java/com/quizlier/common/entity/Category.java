@@ -1,4 +1,4 @@
-package com.quizlier.common.entity.core;
+package com.quizlier.common.entity;
 
 import java.util.Date;
 
@@ -9,29 +9,35 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
 @Entity
-@Table(name = "option", schema = "core_service")
-public class Option {
+@Table(name = "category", schema = "core_service")
+public class Category {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
     @Column(nullable = false)
-    private String optionText;
+    private String name;
     
     @Column(nullable = false)
-    private boolean isCorrect;
+    private String description;
     
-    @ManyToOne
-    @JoinColumn(name = "questionid")
-    private Question question;
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createdAt;
     
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date updatedAt;
+    
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date deletedAt;
+
 	public Long getId() {
 		return id;
 	}
@@ -39,30 +45,21 @@ public class Option {
 	public void setId(Long id) {
 		this.id = id;
 	}
-    
-    
-    public String getOption_text() {
-		return optionText;
+
+	public String getName() {
+		return name;
 	}
 
-	public void setOption_text(String option_text) {
-		this.optionText = option_text;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public boolean getIsCorrect() {
-		return isCorrect;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setIsCorrect(boolean isCorrect) {
-		this.isCorrect = isCorrect;
-	}
-
-	public Question getQuestion() {
-		return question;
-	}
-
-	public void setQuestion(Question question) {
-		this.question = question;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public Date getCreatedAt() {
@@ -89,15 +86,4 @@ public class Option {
 		this.deletedAt = deletedAt;
 	}
 
-	@CreationTimestamp
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date createdAt;
-    
-    @CreationTimestamp
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date updatedAt;
-    
-    @CreationTimestamp
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date deletedAt;
 }

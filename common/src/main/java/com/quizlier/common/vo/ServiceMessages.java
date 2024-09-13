@@ -15,11 +15,11 @@ public class ServiceMessages {
 	public static final String NO_CORRECT_ANSWER = "Question does not have a correct answer set";
 
 	public static String invalidEntity(String entity, String id) {
-		return String.format("'%s' with id '%s' does not exist", entity, id);
+		return String.format("%s with id '%s' does not exist", entity, id);
 	}
 
 	public static String duplicateEntity(String entity) {
-		return String.format("'%s' already exists", entity);
+		return String.format("%s already exists", entity);
 	}
 	
 	public static final String GENERAL_ERROR_MESSAGE = "Request processing error";

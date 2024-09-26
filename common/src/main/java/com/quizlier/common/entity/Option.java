@@ -41,12 +41,12 @@ public class Option {
 	}
     
     
-    public String getOption_text() {
+    public String getOptionText() {
 		return optionText;
 	}
 
-	public void setOption_text(String option_text) {
-		this.optionText = option_text;
+	public void setOptionText(String optionText) {
+		this.optionText = optionText;
 	}
 
 	public boolean getIsCorrect() {
